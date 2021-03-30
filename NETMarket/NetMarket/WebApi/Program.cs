@@ -35,6 +35,9 @@ namespace WebApi
 
                     //Ejecución de la migración:
                     await context.Database.MigrateAsync();
+
+                    //Ejecutar la carga de los datos de los archivos Json:
+                    await MarketDbContextData.CargarDataAsync(context, loggerFactory);
                 }
                 catch (Exception ex)
                 {
