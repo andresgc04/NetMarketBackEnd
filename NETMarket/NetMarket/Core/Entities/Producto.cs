@@ -8,14 +8,11 @@ using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    public class Producto
+    public class Producto : ClaseBase
     {
         public Producto()
         {
         }
-
-        [Key]
-        public int ProductoId { get; set; }
 
         public string Nombre { get; set; }
 
@@ -25,9 +22,14 @@ namespace Core.Entities
 
         public int MarcaId { get; set; }
 
-        [Column(TypeName="decimal(18,4)")]
+        public int CategoriaId { get; set; }
+
         public decimal Precio { get; set; }
 
         public string Imagen { get; set; }
+
+        public Marca marca { get; set; }
+
+        public Categoria categoria { get; set; }
     }
 }
