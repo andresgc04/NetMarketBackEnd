@@ -28,8 +28,8 @@ namespace Core.Entities
 
         public string Imagen { get; set; }
 
-        public Marca marca { get; set; }
+        public Marca Marca { get; set; }
 
-        public Categoria categoria { get; set; }
+        public Categoria Categoria { get; set; }
     }
 }
