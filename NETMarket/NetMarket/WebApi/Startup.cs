@@ -30,6 +30,8 @@ namespace WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped(typeof(IGenericRepository<>), (typeof(IGenericRepository<>)));
+
             services.AddDbContext<MarketDbContext>(opt => {
                 opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
