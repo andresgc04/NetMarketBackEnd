@@ -8,6 +8,7 @@ using Core.Interfaces;
 using Core.Specifications;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Dtos;
+using WebApi.Errors;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -47,6 +48,11 @@ namespace WebApi.Controllers
             var spec = new ProductoWithCategoriaAndMarcaSpecification(id);
 
             var producto = await _productoRepository.GetByIdWithSpec(spec);
+
+            if(producto == null)
+            {
+                return NotFound(new CodeErrorResponse(404, "El producto no existe"));
+            }
 
             return _mapper.Map<Producto, ProductoDto>(producto);
         }
