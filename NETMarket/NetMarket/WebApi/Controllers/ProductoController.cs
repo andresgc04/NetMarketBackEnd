@@ -14,9 +14,8 @@ using WebApi.Errors;
 
 namespace WebApi.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ProductoController : Controller
+
+    public class ProductoController : BaseApiController
     {
         private readonly IGenericRepository<Producto> _productoRepository;
         private readonly IMapper _mapper;

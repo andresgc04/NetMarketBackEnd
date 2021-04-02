@@ -56,6 +56,8 @@ namespace WebApi
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApi v1"));
             }
 
+            app.UseStatusCodePagesWithReExecute("/errors", "?code={0}");
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
