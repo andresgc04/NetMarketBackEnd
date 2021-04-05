@@ -20,7 +20,7 @@ namespace BusinessLogic.Data
                 if (!context.Marca.Any())
                 {
                     //Leer los datos desde el archivo Json:
-                    var marcaData = File.ReadAllText("../BusinessLogic/CargarData/marca.json");
+                    var marcaData = File.ReadAllText("../Core/CargarData/marca.json");
 
                     //Deserializar los datos en un tipo de archivo de listado de marcas:
                     var marcas = JsonSerializer.Deserialize<List<Marca>>(marcaData);
@@ -39,7 +39,7 @@ namespace BusinessLogic.Data
                 if (!context.Categoria.Any())
                 {
                     //Leer los datos desde el archivo Json:
-                    var categoriaData = File.ReadAllText("../BusinessLogic/CargarData/categoria.json");
+                    var categoriaData = File.ReadAllText("../Core/CargarData/categoria.json");
 
                     //Deserializar los datos en un tipo de archivo de listado de categorias:
                     var categorias = JsonSerializer.Deserialize<List<Categoria>>(categoriaData);
@@ -58,7 +58,7 @@ namespace BusinessLogic.Data
                 if (!context.Producto.Any())
                 {
                     //Leer los datos desde el archivo Json:
-                    var productoData = File.ReadAllText("../BusinessLogic/CargarData/producto.json");
+                    var productoData = File.ReadAllText("../Core/CargarData/producto.json");
 
                     //Deserializar los datos en un tipo de archivo de listado de productos:
                     var productos = JsonSerializer.Deserialize<List<Producto>>(productoData);

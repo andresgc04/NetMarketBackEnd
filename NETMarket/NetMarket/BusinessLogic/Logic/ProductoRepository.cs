@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessLogic.Data;
 using Core.Entities;
-using Core.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Repository.Interfaces;
 
 namespace BusinessLogic.Logic
 {

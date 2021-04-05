@@ -5,12 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Core.Entities;
 
-namespace Core.Interfaces
+namespace Repository.Interfaces
 {
     public interface IProductoRepository
     {
         Task<Producto> GetProductoByIdAsync(int id);
-
         Task<IReadOnlyList<Producto>> GetProductosAsync();
     }
 }

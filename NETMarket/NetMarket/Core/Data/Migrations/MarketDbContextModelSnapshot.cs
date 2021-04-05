@@ -3,16 +3,14 @@ using BusinessLogic.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace BusinessLogic.Data.Migrations
+namespace Core.Data.Migrations
 {
     [DbContext(typeof(MarketDbContext))]
-    [Migration("20210330015654_MigracionInicial")]
-    partial class MigracionInicial
+    partial class MarketDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -78,7 +76,7 @@ namespace BusinessLogic.Data.Migrations
                         .HasColumnType("nvarchar(250)");
 
                     b.Property<decimal>("Precio")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18,4)");
 
                     b.Property<int>("Stock")
                         .HasColumnType("int");

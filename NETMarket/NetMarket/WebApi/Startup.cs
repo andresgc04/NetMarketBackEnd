@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using BusinessLogic.Data;
 using BusinessLogic.Logic;
-using Core.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -15,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Repository.Interfaces;
 using WebApi.Dtos;
 using WebApi.Middleware;
 
@@ -33,13 +33,24 @@ namespace WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAutoMapper(typeof(MappingProfiles));
-
             services.AddScoped(typeof(IGenericRepository<>), (typeof(GenericRepository<>)));
+
+
+
+
 
             services.AddDbContext<MarketDbContext>(opt => {
                 opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
             services.AddTransient<IProductoRepository, ProductoRepository>();
+
+
+
+
+
+
+
+
             services.AddControllers();
             //services.AddSwaggerGen(c =>
             //{

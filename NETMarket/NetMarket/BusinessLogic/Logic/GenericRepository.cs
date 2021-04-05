@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessLogic.Data;
 using Core.Entities;
-using Core.Interfaces;
-using Core.Specifications;
+using Repository.Interfaces;
+using Repository.Specifications;
 using Microsoft.EntityFrameworkCore;
+using Core.Data;
 
 namespace BusinessLogic.Logic
 {

@@ -10,10 +10,6 @@ namespace Core.Entities
 {
     public class Producto : ClaseBase
     {
-        public Producto()
-        {
-        }
-
         public string Nombre { get; set; }
 
         public string Descripcion { get; set; }
@@ -28,6 +24,8 @@ namespace Core.Entities
 
         public string Imagen { get; set; }
 
+
+        //Property Navigation
         public Marca Marca { get; set; }
 
         public Categoria Categoria { get; set; }

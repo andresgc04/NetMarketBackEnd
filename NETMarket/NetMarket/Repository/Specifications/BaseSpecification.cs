@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Specifications
+namespace Repository.Specifications
 {
     public class BaseSpecification<T> : ISpecification<T>
     {

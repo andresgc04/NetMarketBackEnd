@@ -17,6 +17,7 @@
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Dtos\" />

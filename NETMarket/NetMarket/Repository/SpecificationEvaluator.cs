@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Core.Entities;
-using Core.Specifications;
 using Microsoft.EntityFrameworkCore;
+using Repository.Specifications;
 
-namespace BusinessLogic.Data
+namespace Core.Data
 {
     public class SpecificationEvaluator<T> where T: ClaseBase
     {
