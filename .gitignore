@@ -350,5 +350,5 @@ MigrationBackup/
 .ionide/
 
 #File Configuration
-WebApi/appsettings.json
+NETMarket/NetMarket/WebApi/appsettings.json
 
